@@ -1,0 +1,7 @@
+numpy==1.23.0
+scipy==1.9.3
+opencv-python==4.6.0.66
+kornia==0.4.1
+imutils==0.5.4
+pyflann-py3==0.1.0
+scikit-learn==1.2.0
