@@ -162,7 +162,7 @@ class FootAndBall(nn.Module):
 
         # Compute indexes of cells with detected object
         xc = indices % w
-        yc = indices // w
+        yc = torch.div(indices, w, rounding_mode='floor')
 
         # Compute pixel coordinates of cell centers
         xc = xc.float() * downscale_factor + (downscale_factor - 1.) / 2.

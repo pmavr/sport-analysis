@@ -41,8 +41,8 @@ def estimate(camera_estimator, detected_edge_map):
 class CameraEstimator(CameraObject):
     def __init__(self, output_resolution=None, frames_to_track=1800):
         super().__init__(output_resolution)
-        model_filename = f'{utils.get_siamese_model_path()}/siamese_10.pth'
-        feature_pose_database_filename = f'{utils.get_camera_edge_map_features_path()}feature-camera_pose_database.mat'
+        model_filename = f'{utils.get_siamese_model_path()}siamese.pth'
+        feature_pose_database_filename = f'{utils.get_camera_estimator_files_path()}feature-camera_pose_database.mat'
 
         if feature_pose_database_filename:
             data = sio.loadmat(feature_pose_database_filename)

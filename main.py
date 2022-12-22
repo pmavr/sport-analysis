@@ -41,52 +41,39 @@ def process_frame(frame):
 if __name__ == '__main__':
     from time import time
 
-    input_videos = [
-        # 'issia6.avi'
-        # ,
-        # 'aris_aek.mp4'qq
-        # ,
-        'belgium_japan.mp4'
-        # ,
-        # 'brazil_germany.mp4'
-        # ,
-        # 'aek_olympiakos.mp4'
-    ]
+    input_file = 'belgium_japan.mp4'
+    input_path_to = f'{utils.get_project_root()}clips/'
 
-    for i in range(len(input_videos)):
-        input_file = input_videos[i]
-        input_path_to = f'{utils.get_project_root()}clips/'
+    court_detector = CourtDetector(output_resolution=(1280, 720))
 
-        court_detector = CourtDetector(output_resolution=(1280, 720))
+    camera_estimator = CameraEstimator(frames_to_track=200, output_resolution=(1280, 720))
 
-        camera_estimator = CameraEstimator(frames_to_track=200, output_resolution=(1280, 720))
+    object_detector = MyFootAndBallDetector(frames_to_track=2)
+    team_classifier = ColorHistogramClassifier(num_of_teams=3)
+    team_classifier.initialize_using_video(
+        f'{input_path_to}{input_file}', object_detector, court_detector, training_frames=50)
+    team_detector = TeamDetector(object_detector, team_classifier)
 
-        object_detector = MyFootAndBallDetector(dir='mse_10_0.001', frames_to_track=2)
-        team_classifier = ColorHistogramClassifier(num_of_teams=3)
-        team_classifier.initialize_using_video(
-            f'{input_path_to}{input_file}', object_detector, court_detector, training_frames=50)
-        team_detector = TeamDetector(object_detector, team_classifier)
+    analysis = GameAnalytics()
+    analysis.infer_team_sides(f'{input_path_to}{input_file}', court_detector, team_detector,
+                              camera_estimator, training_frames=1)
 
-        analysis = GameAnalytics()
-        analysis.infer_team_sides(f'{input_path_to}{input_file}', court_detector, team_detector,
-                                  camera_estimator, training_frames=1)
+    output_file = f"{input_file.split('.')[0]}.avi"
+    output_path_to = f'{utils.get_project_root()}'
 
-        output_file = f"{input_file.split('.')[0]}.avi"
-        output_path_to = f'{utils.get_project_root()}tasks/results/game_analytics/'
-
-        video_handler = VideoHandler(file=f'{input_path_to}{input_file}',
-                                     output_resolution=(1280, 720))
-        video_handler.start_recording(output_file=f'{output_path_to}{output_file}', recording_resolution=(1280 + 920, 720))
-        time_per_frame = []
-        while video_handler.has_frames():
-            frame = video_handler.get_frame()
-            start = time()
-            output = process_frame(frame)
-            time_per_frame.append(time() - start)
-            video_handler.show_image('Output', output)
-        mean_time_per_frame = sum(time_per_frame) / len(time_per_frame)
-        print(f'| Elapsed time:{sum(time_per_frame):.1f} '
-              f'| FPS:{1 / mean_time_per_frame:.3f} |')
-        video_handler.release()
+    video_handler = VideoHandler(file=f'{input_path_to}{input_file}',
+                                 output_resolution=(1280, 720))
+    video_handler.start_recording(output_file=f'{output_path_to}{output_file}', recording_resolution=(1280 + 920, 720))
+    time_per_frame = []
+    while video_handler.has_frames():
+        frame = video_handler.get_frame()
+        start = time()
+        output = process_frame(frame)
+        time_per_frame.append(time() - start)
+        video_handler.show_image('Output', output)
+    mean_time_per_frame = sum(time_per_frame) / len(time_per_frame)
+    print(f'| Elapsed time:{sum(time_per_frame):.1f} '
+          f'| FPS:{1 / mean_time_per_frame:.3f} |')
+    video_handler.release()
 
     sys.exit()

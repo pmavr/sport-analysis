@@ -76,12 +76,12 @@ class FootAndBallDetector(PlayerBallDetector):
 
 class MyFootAndBallDetector(FootAndBallDetector):
 
-    def __init__(self, player_conf=.7, ball_conf=.7, dir='', model_num=22, frames_to_track=0):
+    def __init__(self, player_conf=.7, ball_conf=.7, frames_to_track=0):
         super().__init__(frames_to_track)
         model = FootAndBall.initialize(phase='detect', ball_threshold=ball_conf, player_threshold=player_conf,
                                        max_ball_detections=100, max_player_detections=100)
         self.model, _, _ = FootAndBall.load_model(
-            f'{utils.get_footandball_model_path()}{dir}/object_detector_{model_num}.pth', model)
+            f'{utils.get_footandball_model_path()}/object_detector.pth', model)
         self.model.eval()
 
 

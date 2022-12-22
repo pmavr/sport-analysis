@@ -8,7 +8,11 @@ input, with as less processing time per frame as possible.
 ![img.png](img.png)
 
 ### Instructions to run demo:
-1. Download files and place them in the respective directories
+1. Download files DualPix2Pix models for court detection 
+      - segmentation model weights: https://drive.google.com/file/d/1QCinahFH_830nH2RqwgoT8jehqxJgHQK/view?usp=share_link
+      - line detection model weights: https://drive.google.com/file/d/1QzJzSUP9Zmqc4Eiko3dS1ZZTDmSQ0E10/view?usp=share_link
+2. Place downloaded files in directory _/models/generated_models/two_pix2pix/_
+3. 
 
 ## References
 <a id="1">[1]</a> 

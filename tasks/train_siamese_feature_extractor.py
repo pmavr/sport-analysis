@@ -129,7 +129,7 @@ def fit_model(model, opt_func, loss_func, train_loader,
 if __name__ == '__main__':
 
     print('[INFO] Loading training data..')
-    data = sio.loadmat(f'{utils.get_camera_edge_map_features_path()}train_data_10k.mat')
+    data = sio.loadmat(f'{utils.get_camera_estimator_files_path()}train_data_10k.mat')
     pivot_images = data['pivot_images']
     positive_images = data['positive_images']
 
