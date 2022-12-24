@@ -7,9 +7,10 @@ input, with as less processing time per frame as possible.
 
 ![img.png](img.png)
 
-Available demo on YouTube: https://www.youtube.com/watch?v=m6JKf9K2b44
 
-### Instructions to run demo:
+**Available demo on YouTube:** https://www.youtube.com/watch?v=m6JKf9K2b44
+
+## Instructions to run demo:
 1. Download files DualPix2Pix models for court detection 
       - segmentation model weights: https://drive.google.com/file/d/1QCinahFH_830nH2RqwgoT8jehqxJgHQK/view?usp=share_link
       - line detection model weights: https://drive.google.com/file/d/1QzJzSUP9Zmqc4Eiko3dS1ZZTDmSQ0E10/view?usp=share_link
@@ -25,17 +26,17 @@ Chen, J., & Little, J. J. (2019). Sports camera calibration via synthetic data. 
 
 ---
 ## Citation
-If you find this work useful in your research, please consider citing using the entry below:
+If you find this work useful in your research, please consider citing it using the entry below:
 
-@article{mavrogiannis2022amateur,
-   title={Amateur football analytics using computer vision},
-   author={Mavrogiannis, Panagiotis and Maglogiannis, Ilias},
-   journal={Neural Computing and Applications},
-   volume={34},
-   number={22},
-   pages={19639--19654},
-   year={2022},
-   publisher={Springer} 
+>@article{mavrogiannis2022amateur,<br />
+&nbsp;&nbsp;&nbsp;&nbsp; title={Amateur football analytics using computer vision},<br />
+&nbsp;&nbsp;&nbsp;&nbsp; author={Mavrogiannis, Panagiotis and Maglogiannis, Ilias},<br />
+&nbsp;&nbsp;&nbsp;&nbsp; journal={Neural Computing and Applications},<br />
+&nbsp;&nbsp;&nbsp;&nbsp; volume={34},<br />
+&nbsp;&nbsp;&nbsp;&nbsp; number={22},<br />
+&nbsp;&nbsp;&nbsp;&nbsp; pages={19639--19654},<br />
+&nbsp;&nbsp;&nbsp;&nbsp; year={2022},<br />
+&nbsp;&nbsp;&nbsp;&nbsp; publisher={Springer}<br /> 
 }
 
 ---
