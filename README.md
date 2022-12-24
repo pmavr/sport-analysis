@@ -7,6 +7,8 @@ input, with as less processing time per frame as possible.
 
 ![img.png](img.png)
 
+Available demo on YouTube: https://www.youtube.com/watch?v=m6JKf9K2b44
+
 ### Instructions to run demo:
 1. Download files DualPix2Pix models for court detection 
       - segmentation model weights: https://drive.google.com/file/d/1QCinahFH_830nH2RqwgoT8jehqxJgHQK/view?usp=share_link
@@ -20,6 +22,21 @@ Komorowski, J., Kurzejamski, G., & Sarwas, G. (2019). Footandball: Integrated pl
 
 <a id="2">[2]</a> 
 Chen, J., & Little, J. J. (2019). Sports camera calibration via synthetic data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (pp. 0-0).
+
+---
+## Citation
+If you find this work useful in your research, please consider citing using the entry below:
+
+@article{mavrogiannis2022amateur,
+  title={Amateur football analytics using computer vision},
+  author={Mavrogiannis, Panagiotis and Maglogiannis, Ilias},
+  journal={Neural Computing and Applications},
+  volume={34},
+  number={22},
+  pages={19639--19654},
+  year={2022},
+  publisher={Springer}
+}
 
 ---
 
