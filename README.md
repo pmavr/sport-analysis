@@ -28,14 +28,14 @@ Chen, J., & Little, J. J. (2019). Sports camera calibration via synthetic data. 
 If you find this work useful in your research, please consider citing using the entry below:
 
 @article{mavrogiannis2022amateur,
-  title={Amateur football analytics using computer vision},
-  author={Mavrogiannis, Panagiotis and Maglogiannis, Ilias},
-  journal={Neural Computing and Applications},
-  volume={34},
-  number={22},
-  pages={19639--19654},
-  year={2022},
-  publisher={Springer}
+   title={Amateur football analytics using computer vision},
+   author={Mavrogiannis, Panagiotis and Maglogiannis, Ilias},
+   journal={Neural Computing and Applications},
+   volume={34},
+   number={22},
+   pages={19639--19654},
+   year={2022},
+   publisher={Springer} 
 }
 
 ---
