@@ -89,8 +89,7 @@ class CameraEstimator(CameraObject):
         refined_homography = self._refine_homography(
             source_h=estimated_homography, tar_img=detected_edge_map, eps_thresh=1e-4)
 
-        # return refined_homography
-        return estimated_homography
+        return refined_homography
 
     def _infer_features_from_edge_map(self, edge_map):
         edge_map = cv2.resize(edge_map, (320, 180))
