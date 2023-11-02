@@ -25,19 +25,10 @@ Komorowski, J., Kurzejamski, G., & Sarwas, G. (2019). Footandball: Integrated pl
 Chen, J., & Little, J. J. (2019). Sports camera calibration via synthetic data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (pp. 0-0).
 
 ---
-## Citation
+## Publication
 If you find this work useful in your research, please consider citing it using the entry below:
 
->@article{mavrogiannis2022amateur,<br />
-&nbsp;&nbsp;&nbsp;&nbsp; title={Amateur football analytics using computer vision},<br />
-&nbsp;&nbsp;&nbsp;&nbsp; author={Mavrogiannis, Panagiotis and Maglogiannis, Ilias},<br />
-&nbsp;&nbsp;&nbsp;&nbsp; journal={Neural Computing and Applications},<br />
-&nbsp;&nbsp;&nbsp;&nbsp; volume={34},<br />
-&nbsp;&nbsp;&nbsp;&nbsp; number={22},<br />
-&nbsp;&nbsp;&nbsp;&nbsp; pages={19639--19654},<br />
-&nbsp;&nbsp;&nbsp;&nbsp; year={2022},<br />
-&nbsp;&nbsp;&nbsp;&nbsp; publisher={Springer}<br /> 
-}
+Mavrogiannis, P., Maglogiannis, I. Amateur football analytics using computer vision. Neural Comput & Applic 34, 19639–19654 (2022). <a href=https://doi.org/10.1007/s00521-022-07692-6>https://doi.org/10.1007/s00521-022-07692-6</a>
 
 ---
 
